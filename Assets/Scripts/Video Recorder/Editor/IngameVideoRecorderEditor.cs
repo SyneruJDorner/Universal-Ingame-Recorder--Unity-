@@ -15,8 +15,9 @@ public class IngameVideoRecorderEditor : Editor
 
         if (GUILayout.Button("Open Video Save Location"))
         {
-            Debug.Log(recorederObject.savePath);
-            System.Diagnostics.Process.Start(recorederObject.savePath);
+            var openingLocation = recorederObject.savePath + "\"";
+            Debug.Log(openingLocation);
+            System.Diagnostics.Process.Start(openingLocation);
         }
 
     }
